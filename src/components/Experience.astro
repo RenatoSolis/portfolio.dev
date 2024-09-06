@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Octubre 2023 - Actualmente...",
+    title: "Programador Jr.",
+    company: "Universidad Autónoma de Asunción",
+    description:
+      "Desarrollo de aplicaciones de escritorio en Visual Basic y C#, utilizando SQL Server. Formo parte del equipo encargado de crear y mantener soluciones de software para la universidad.",
+    //link: "https://twitch.tv/midudev",
+  },
+  {
+    date: "Abril 2023",
+    title: "Operador",
+    company: "Universidad Autónoma de Asunción",
+    description:
+      "Encargado de la gestión de plataformas, componentes y herramientas para el desarrollo de aplicaciones web, utilizando tecnologías como PHP, MySQL y Linux.",
+  },
+  {
+    date: "Abril 2022",
+    title: "Instructor/Soporte Técnico",
+    company: "Universidad Autónoma de Asunción",
+    description:
+      "Brindé soporte técnico en el área de informática, resolviendo problemas relacionados con hardware, software y redes, garantizando el correcto funcionamiento de los equipos y sistemas de la institución. Además, desempeñé funciones como instructor, asistiendo a estudiantes y personal en el uso de herramientas tecnológicas.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
+
