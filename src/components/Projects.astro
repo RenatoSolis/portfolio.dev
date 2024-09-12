@@ -9,6 +9,9 @@ import VisualBasic from "./icons/VisualBasic.astro"
 import MicrosoftSQLServer from "./icons/MicrosoftSQLServer.astro"
 import CSHARP from "./icons/CSHARP.astro"
 import DevExpress from "./icons/DevExpress.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import JavaScript from "./icons/JavaScript.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -58,13 +61,36 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: DevExpress,
   },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#003159] text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#003159] text-white",
+    icon: CSS,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#003159] text-white",
+    icon: JavaScript,
+  },
 }
 const PROJECTS = [
 {
+    title: "URL-SHORTENER",
+    description:
+      "Es una aplicación web desarrollada con HTML, CSS y JavaScript que permite acortar enlaces de forma rápida y eficiente. El sistema utiliza una API para generar URLs acortadas que son fáciles de compartir. La interfaz es sencilla y amigable, ideal para usuarios que necesitan acortar enlaces de manera frecuente.",
+    link: "https://frabjous-smakager-c713ba.netlify.app/",
+    github: "https://github.com/RenatoSolis/URL-SHORTENER",
+    image: "/projects/Acortador-de-URL.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+  },
+  {
     title: "SistemaVenta",
     description:
       "Un sistema de gestión de ventas desarrollado en C# y Microsoft SQL Server. Incluye funcionalidades para la administración de inventarios, clientes, y facturación, con una interfaz amigable y optimizada para el manejo de grandes volúmenes de datos. Ideal para pequeñas y medianas empresas que buscan automatizar sus procesos de ventas.",
-    //link: "https://svgl.vercel.app/",
     github: "https://github.com/RenatoSolis/SistemaVenta",
     image: "/projects/SistemaVenta.webp",
     tags: [TAGS.CSHARP, TAGS.MICROSOFTSQLSERVER],
@@ -72,8 +98,7 @@ const PROJECTS = [
   {
     title: "frmPatrocinadores",
     description:
-      "Aplicación CRUD para la gestión de patrocinadores, creada con Visual Basic y Microsoft SQL Server. Permite registrar, modificar, eliminar y consultar información de patrocinadores de manera eficiente. Se integra perfectamente con bases de datos SQL para almacenar y organizar toda la información relevante de manera segura.",
-    //link: "https://svgl.vercel.app/",
+      "Aplicación CRUD para la gestión de patrocinadores puesta en producción en la UAA, creada con Visual Basic y Microsoft SQL Server. Permite registrar, modificar, eliminar y consultar información de patrocinadores de manera eficiente. Se integra perfectamente con bases de datos SQL para almacenar y organizar toda la información relevante de manera segura.",
     github: "https://github.com/RenatoSolis/frmPatrocinadores-CRUD",
     image: "/projects/frmPatrocinadores.webp",
     tags: [TAGS.VISUALBASIC, TAGS.MICROSOFTSQLSERVER, TAGS.DEVEXPRESS],
@@ -91,8 +116,8 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    //PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    PROJECTS.map(({ image, title, description, tags, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    //PROJECTS.map(({ image, title, description, tags, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -127,12 +152,12 @@ const PROJECTS = [
               
             </LinkButton>
           )}
-          {/* {link && (
+          { link && (
             <LinkButton href={link}>
               <Link class="size-4" />
               Preview
             </LinkButton>
-          )} */}
+          )}
         </footer>
     </div>
   </div>
