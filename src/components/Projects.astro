@@ -12,6 +12,7 @@ import DevExpress from "./icons/DevExpress.astro"
 import HTML from "./icons/HTML.astro"
 import CSS from "./icons/CSS.astro"
 import JavaScript from "./icons/JavaScript.astro"
+import TypeScript from "./icons/TypeScript.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -76,9 +77,23 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: JavaScript,
   },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#003159] text-white",
+    icon: TypeScript,
+  },
 }
 const PROJECTS = [
 {
+  title: "svg-rs",
+    description:
+      "SVG-RS es una galería de íconos SVG gratuitos diseñada para desarrolladores y diseñadores. Este proyecto fue creado para simplificar el acceso y uso de íconos en aplicaciones web, combinando funcionalidad con una interfaz intuitiva y atractiva.",
+    link: "https://svg-rs-git-main-renato-solis-projects.vercel.app/",
+    github: "https://github.com/RenatoSolis/svg-rs",
+    image: "/projects/svg-rs.webp",
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+  },
+  {
     title: "URL-SHORTENER",
     description:
       "Es una aplicación web desarrollada con HTML, CSS y JavaScript que permite acortar enlaces de forma rápida y eficiente. El sistema utiliza una API para generar URLs acortadas que son fáciles de compartir. La interfaz es sencilla y amigable, ideal para usuarios que necesitan acortar enlaces de manera frecuente.",
